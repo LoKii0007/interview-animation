@@ -23,7 +23,7 @@ export function RubiksCubeModel(props) {
   }, [])
 
   return (
-    <group ref={group} {...props} dispose={null} rotation={[0,0, 0 ]} position={[0,0,0]} >
+    <group ref={group} {...props} dispose={null} rotation={[0,0, 0 ]} position={[-2,-2,0]} >
       <group name="Sketchfab_Scene">
         <group name="GLTF_SceneRootNode" >
           <group name="Cube_0" position={[3.993, 4, 0.007]} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
