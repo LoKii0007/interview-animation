@@ -1,0 +1,91 @@
+.section-1{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.sec1-text{
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 700;
+    color: white;
+}
+
+.floating-img{
+    mix-blend-mode: blur(5px);
+}
+
+.floating-img img{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    height: 70px;
+    width: 70px;
+}
+
+.flt-img-1{
+    transform: translate(20vw,20vh);
+}
+.flt-img-2{
+    transform: translate(-20vw, -25vh);
+}
+.flt-img-3{
+    transform: translate(30vw, -10vh);
+}
+.flt-img-4{
+    transform: translate(-35vw, 0vh);
+}
+.flt-img-5{
+    transform: translate(-20vw, 20vh);
+}
+.flt-img-1 img, .flt-img-2 img, .flt-img-3 img{
+    animation: float-up 3s infinite ;
+}
+
+.flt-img-4 img, .flt-img-5 img{
+    animation: float-up 3s 1s infinite ;
+}
+
+/*# ------------------blockchain-end-----------------------------  */
+
+.blockchain-end{
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+    color: white;
+}
+
+.cube-model{
+    transform: translate(-25vw, -130vh);
+    height: 400px;
+    width: 400px;
+}
+
+
+/*# ------------------keyframes-----------------------------  */
+
+@keyframes float-up {
+    0%, 100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transition: ease;
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(20px);
+        transition: ease;
+    }
+}
+
+@keyframes float-down {
+    0%, 100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transition: ease;
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(20px);
+        transition: ease;
+    }
+}

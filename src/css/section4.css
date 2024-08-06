@@ -1,0 +1,38 @@
+.section-4{
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+
+.part-1{
+    height: 100vh;
+    width: 100vw;
+}
+
+.marketing-circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    scale: 10;
+}
+
+.section4-text1{
+    /* width: 100%; */
+    font-size: 100px;
+    color: white;
+    opacity: 0;
+}
+
+.section4-text2{
+    color: black;
+    z-index: 120;
+    font-size: 30px;
+    opacity: 0;
+}
+
+.spacing{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
