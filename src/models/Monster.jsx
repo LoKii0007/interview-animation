@@ -3,11 +3,11 @@ import { useGLTF } from '@react-three/drei'
 
 export function MonsterModel(props) {
   const { nodes, materials } = useGLTF('/monster-transformed.glb')
-  let rotationX = -135 * (Math.PI / 180)
+  let rotationX = -125 * (Math.PI / 180)
   let rotationY = 5 * (Math.PI / 180)
 
   useEffect(()=>{
-    console.log('changing')
+    // console.log('changing')
   }, [props.rotationZ])
 
   return (
@@ -16,7 +16,7 @@ export function MonsterModel(props) {
       geometry={nodes.Object_2.geometry} 
       material={materials.initialShadingGroup} 
       position={[0,-2,0]}
-      rotation={[ rotationX, rotationY , props.rotationZ]} />
+      rotation={[ rotationX, 0 , props.rotationZ]} />
     </group>
   )
 }
