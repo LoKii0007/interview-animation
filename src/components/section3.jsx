@@ -7,7 +7,7 @@ function Section3() {
   gsap.registerPlugin(ScrollTrigger)
   // const sectionRef = useRef()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
 
     const windowHeight = window.innerHeight
     console.log(windowHeight)

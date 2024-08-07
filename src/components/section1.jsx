@@ -23,7 +23,7 @@ function Section1() {
         trigger:'.section-1',
         start :'bottom bottom',
         end:'bottom 30%',
-        scrub:0.5
+        scrub:1
       }
     })
 

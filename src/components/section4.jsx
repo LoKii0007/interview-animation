@@ -65,7 +65,7 @@ function Section4() {
             <div>Marketing</div>
           </div>
         </div>
-        <div className="part-2 spacing"></div>
+        {/* <div className="part-2 spacing"></div> */}
       </div>
     </>
   )
