@@ -43,13 +43,13 @@ function Section6() {
         <>
             <div className="section-6 d-flex justify-content-evenly align-items-center">
                 <div className="can-left d-flex flex-column align-items-center">
-                    <div className="can-card col-6 can-1 d-flex" onClick={(e)=>handleDrink(e)} name='drink-1'>
+                    <div className="can-card col-6 can-1 d-flex align-items-center" onClick={(e)=>handleDrink(e)} name='drink-1'>
                         <div className="card-left" >
                             <div className="can-heading text-center">Monster Energy</div>
                             <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
                         </div>
                         <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
+                            <img className='can-img' src="/monster-green.png" alt="" />
                         </div>
                     </div>
                     {/* <div className="can-card col-6 can-1 d-flex my-3">
@@ -101,13 +101,13 @@ function Section6() {
 
                 <div className="can-right d-flex flex-column align-items-center">
 
-                    <div className="can-card col-6 can-1 d-flex" onClick={(e)=>handleDrink(e)} name='drink-2'>
+                    <div className="can-card col-6 can-1 d-flex align-items-center" onClick={(e)=>handleDrink(e)} name='drink-2'>
                         <div className="card-left">
-                            <div className="can-heading text-center">Red Bull</div>
+                            <div className="can-heading text-center">Monster Pink</div>
                             <div className="can-desc text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dicta fuga quam est</div>
                         </div>
                         <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
+                            <img className='can-img' src="/monster-pink.png" alt="" />
                         </div>
                     </div>
                     {/* <div className="can-card col-6 can-1 d-flex my-3">
