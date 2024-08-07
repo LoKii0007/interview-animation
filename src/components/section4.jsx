@@ -46,7 +46,7 @@ function Section4() {
         start: 'center bottom',
         end: `+=${height}`,
         scrub: 1,
-        markers : true
+        // markers : true
       }
     })
 

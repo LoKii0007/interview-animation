@@ -1,0 +1,49 @@
+.section-2{
+    /* height: 200vh; */
+    width: 100vw;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.blur-div{
+    height: 90vh;
+    width: 90vw;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: #f5f3f581;
+}
+
+.blur-section{
+    height: 150vh;
+    width: 100%;
+    z-index: 100;
+}
+
+.blur-wrapper{
+    height: 90vh;
+    width: 90vw;
+}
+
+.box-section{
+    width: 100%;
+    transform: translateY(50px);
+}
+
+.box-1{
+    height: 300px;
+    width: 300px;
+    background-color: #8FC8E8;
+    transform: translate(-20vw, -120vh);
+}
+
+.box-2{
+    height: 300px;
+    width: 300px;
+    background-color: #ECD190;
+    transform: translate(20vw, -120vh);
+    z-index: 90;
+}
+
+.blur-spacing{
+    height: 100vh;
+}

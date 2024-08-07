@@ -5,15 +5,15 @@ import { gsap } from 'gsap'
 
 function Section3() {
   gsap.registerPlugin(ScrollTrigger)
-  const sectionRef = useRef()
+  // const sectionRef = useRef()
 
   useLayoutEffect(() => {
 
     const windowHeight = window.innerHeight
     console.log(windowHeight)
-    const ref1 = sectionRef.current
+    // const ref1 = sectionRef.current
 
-    if (ref1) {
+    // if (ref1) {
       gsap.to('.word-text, .inner-circle, .middle-circle, .outer-circle', {
         rotation: 0,
         scrollTrigger: {
@@ -35,12 +35,12 @@ function Section3() {
         }
       })
 
-     }
+    //  }
   }, [])
 
   return (
     <>
-      <div ref={sectionRef} className="main-div">
+      {/* <div ref={sectionRef} className="main-div"> */}
         <div className="word pinned d-flex justify-content-center align-items-center ">
           <div className='word-text'>
             Aim high. <br />
@@ -59,7 +59,7 @@ function Section3() {
             BUild fast.
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   )
 }
