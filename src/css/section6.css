@@ -1,14 +1,16 @@
 .section-6{
     height: 100vh;
     width: 100vw;
+    background-color: whitesmoke;
 }
 
 .can-card{
     padding: 5px 15px ;
-    border: 4px solid greenyellow;
-    border-radius: 20px;
+    border: 4px solid black;
+    /* border-radius: 5vw; */
     transition: .5s ease;
     cursor: pointer;
+    height: 10vw;
 }
 .can-card:hover{
     background-color: aquamarine;
@@ -22,11 +24,25 @@
     font-size: 12px;
 }
 
+.card-right{
+    height: 80px;
+    /* overflow: hidden; */
+    width: 40px ;
+}
+
 .can-model{
     height: 80vh;
     width: 400px;
 }
 
 .can-img{
-    width: 80px;
+    width: 100px;
+}
+
+.img-style-1{
+    transform: rotateZ(12deg);
+}
+
+.img-style-2{
+    transform: rotateZ(-12deg);
 }

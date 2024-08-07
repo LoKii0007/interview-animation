@@ -31,45 +31,27 @@ function Section6() {
     }, [])
 
     function handleDrink(e) {
-       setPrev(current)
-       setCurrent(e.currentTarget.getAttribute('name'))
+        setPrev(current)
+        setCurrent(e.currentTarget.getAttribute('name'))
     }
 
-    useEffect(()=>{
-       console.log(current)
+    useEffect(() => {
+        console.log(current)
     }, [current])
 
     return (
         <>
             <div className="section-6 d-flex justify-content-evenly align-items-center">
                 <div className="can-left d-flex flex-column align-items-center">
-                    <div className="can-card col-6 can-1 d-flex align-items-center" onClick={(e)=>handleDrink(e)} name='drink-1'>
+                    <div className="can-card col-6 rounded-pill d-flex align-items-center" onClick={(e) => handleDrink(e)} name='drink-1'>
                         <div className="card-left" >
                             <div className="can-heading text-center">Monster Energy</div>
                             <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
                         </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster-green.png" alt="" />
+                        <div className="card-right d-flex align-items-center justify-content-start">
+                            <img className='can-img img-style-1' src="/monster-green.png" alt="" />
                         </div>
                     </div>
-                    {/* <div className="can-card col-6 can-1 d-flex my-3">
-                        <div className="card-left">
-                            <div className="can-heading text-center">Monster Lime</div>
-                            <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
-                        </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div className="can-card col-6 can-1 d-flex">
-                        <div className="card-left">
-                            <div className="can-heading text-center">Coca-cola</div>
-                            <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
-                        </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
-                        </div>
-                    </div> */}
                 </div>
 
                 <div className="can-middle">
@@ -101,33 +83,15 @@ function Section6() {
 
                 <div className="can-right d-flex flex-column align-items-center">
 
-                    <div className="can-card col-6 can-1 d-flex align-items-center" onClick={(e)=>handleDrink(e)} name='drink-2'>
+                    <div className="can-card rounded-pill col-6 d-flex align-items-center" onClick={(e) => handleDrink(e)} name='drink-2'>
+                        <div className="card-right d-flex align-items-center justify-content-end">
+                            <img className='can-img img-style-2' src="/monster-pink.png" alt="" />
+                        </div>
                         <div className="card-left">
                             <div className="can-heading text-center">Monster Pink</div>
                             <div className="can-desc text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dicta fuga quam est</div>
                         </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster-pink.png" alt="" />
-                        </div>
                     </div>
-                    {/* <div className="can-card col-6 can-1 d-flex my-3">
-                        <div className="card-left">
-                            <div className="can-heading text-center">Redbull Green</div>
-                            <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
-                        </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div className="can-card col-6 can-1 d-flex">
-                        <div className="card-left">
-                            <div className="can-heading text-center">Limca</div>
-                            <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
-                        </div>
-                        <div className="card-right">
-                            <img className='can-img' src="/monster.jpg" alt="" />
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </>
