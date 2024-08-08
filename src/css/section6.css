@@ -7,7 +7,6 @@
 .can-card{
     padding: 5px 15px ;
     border: 4px solid black;
-    /* border-radius: 5vw; */
     transition: .5s ease;
     cursor: pointer;
     height: 10vw;
@@ -16,6 +15,12 @@
     background-color: aquamarine;
     transition: .5s ease;
 }
+
+.can-card:hover .can-img{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
 .can-heading{
     font-weight: 500;
 }
@@ -26,17 +31,12 @@
 
 .card-right{
     height: 80px;
-    /* overflow: hidden; */
     width: 40px ;
 }
 
-.can-model{
-    height: 80vh;
-    width: 400px;
-}
-
 .can-img{
-    width: 100px;
+    width: 90px;
+    transition: .5s ease;
 }
 
 .img-style-1{
@@ -45,4 +45,13 @@
 
 .img-style-2{
     transform: rotateZ(-12deg);
+}
+
+.can-model{
+    height: 80vh;
+    width: 400px;
+}
+
+.giphy{
+    width: 400px;
 }

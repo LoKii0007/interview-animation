@@ -106,7 +106,7 @@
     height: 20px;
 }
 .dash, .dash-1{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.324);
 }
 .dash-up, .dash-up-1{
     background-color: black;
@@ -116,14 +116,14 @@
 .dash-fill-1{
     height: 3px;
     width: 100%;
-    background-color: rgb(95, 199, 237);
+    background-color: white;
     z-index: 90;
     animation: horizontal-fill 4s ease infinite;
 }
 .dash-fill-2{
     width: 3px;
     height: 100%;
-    background-color: rgb(95, 199, 237);
+    background-color: white;
     z-index: 90;
     animation: vertical-fill 4s ease infinite;
 }

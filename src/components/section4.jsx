@@ -41,6 +41,7 @@ function Section4() {
     gsap.to('.section4-text1', {
       opacity: 1,
       width :'100%',
+      fontSize:100,
       scrollTrigger: {
         trigger: '.section-4',
         start: 'center bottom',

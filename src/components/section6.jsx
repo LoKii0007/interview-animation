@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Shadow } from '@react-three/drei';
 import '../css/section6.css'
-import { RedbullModel } from '../models/Redbull';
 import { MonsterModel } from '../models/Monster';
 import { MonsterPinkModel } from '../models/MonsterPink';
 
@@ -11,6 +9,7 @@ function Section6() {
     const [rotationZ, setRotationZ] = useState(0)
     const [current, setCurrent] = useState('drink-1')
     const [prev, setPrev] = useState('drink-1')
+    const [loading , setLoading] = useState(false)
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -31,12 +30,18 @@ function Section6() {
     }, [])
 
     function handleDrink(e) {
-        setPrev(current)
-        setCurrent(e.currentTarget.getAttribute('name'))
+        let name = e.currentTarget.getAttribute('name')
+        if(name !== current){
+            setLoading(true)
+            // setPrev(current)
+            setCurrent(name)
+            setTimeout(() => {
+                setLoading(false)
+            }, 700);
+        }
     }
 
     useEffect(() => {
-        console.log(current)
     }, [current])
 
     return (
@@ -55,16 +60,12 @@ function Section6() {
                 </div>
 
                 <div className="can-middle">
-                    {/* <div className="can-model" >
-                        <Canvas camera={{ fov: 30, position: [10, 10, 10] }} >
-                        <OrbitControls enableZoom={false} touches={false} autoRotate={false} />
-                        <ambientLight intensity={2} />
-                        <directionalLight position={[10, 3, 10]} />
-                        <RedbullModel />
-                    </Canvas>
-                    </div> */}
-
-                    <div className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} >
+                    {loading ?
+                    <>
+                       <img className='giphy' src="/giphy.webp" alt="" />
+                    </> : 
+                    <>
+                        <div className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} >
                         <Canvas camera={{ fov: 24, position: [0, 5, 10] }} >
                             <ambientLight intensity={3} />
                             <directionalLight intensity={2} position={[-5, 7, 10]} />
@@ -79,6 +80,7 @@ function Section6() {
                             <MonsterPinkModel rotationZ={rotationZ} />
                         </Canvas>
                     </div>
+                    </>}
                 </div>
 
                 <div className="can-right d-flex flex-column align-items-center">

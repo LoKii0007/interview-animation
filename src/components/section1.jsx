@@ -34,13 +34,14 @@ function Section1() {
       scrollTrigger:{
         trigger:'.section-1',
         start :'bottom bottom',
-        end:'bottom 30%',
-        scrub:1
+        end:'bottom center',
+        scrub:1,
+        markers:true
       }
     })
 
     if(cubeRef){
-      console.log(cubeRef.current.rotation)
+      // console.log(cubeRef.current.rotation)
       tl.to(cubeRef.current.rotation , {
         x:0,
         y: radian*360 ,
