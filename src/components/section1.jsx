@@ -36,7 +36,7 @@ function Section1() {
         start :'bottom bottom',
         end:'bottom center',
         scrub:1,
-        markers:true
+        // markers:true
       }
     })
 
