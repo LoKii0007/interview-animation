@@ -54,7 +54,7 @@ function Section6({ isMobile }) {
                 end:`+=${window.innerHeight}`,
                 pin: true,
                 scrub:1,
-                markers:true
+                // markers:true
             }
         })
        }
