@@ -131,7 +131,7 @@
 /*# ------------------ mdeia queries -----------------------------  */
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .cube-model{
         transform: translateY(-150vh);
     }

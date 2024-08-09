@@ -10,6 +10,8 @@ function Section4({isMobile}) {
   useEffect(() => {
     const height = window.innerHeight
 
+  //# ---------------------circle shrink animation -------------------------------
+
     gsap.to('.marketing-circle', {
       scale: 1,
       scrollTrigger: {
@@ -20,6 +22,9 @@ function Section4({isMobile}) {
       }
     })
 
+  //# --------------------- pin conatiner -------------------------------
+
+
     ScrollTrigger.create({
       trigger: '.section-4',
       start: 'top top',
@@ -27,6 +32,9 @@ function Section4({isMobile}) {
       pin: '.part-1',
       scrub: 1
     })
+
+  //# ---------------------words animations -------------------------------
+
 
     gsap.to('.section4-text2', {
       opacity: 1,
@@ -52,6 +60,9 @@ function Section4({isMobile}) {
       }
     })
 
+  //# ---------------------ball bounce animation -------------------------------
+
+
     let tl1 = gsap.timeline({
       paused:true
     })
@@ -67,7 +78,6 @@ function Section4({isMobile}) {
       start: 'center top',
       end: `center -1%`,
       scrub: 1,
-      // toggleActions:"play none reverse none"
       onEnter:()=>{
         tl1.play()
       },
@@ -91,7 +101,6 @@ function Section4({isMobile}) {
             <div>Marketing</div>
           </div>
         </div>
-        {/* <div className="part-2 spacing"></div> */}
       </div>
     </>
   )

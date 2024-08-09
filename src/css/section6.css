@@ -60,7 +60,9 @@
     display: none !important;
 }
 
-@media screen and (max-width:600px) {
+/*# ------------------ mdeia queries -----------------------------  */
+
+@media screen and (max-width:768px) {
     .section-6{
         display: none !important;
     }

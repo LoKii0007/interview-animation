@@ -14,7 +14,7 @@ function App() {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth<600)
+  const [isMobile, setIsMobile] = useState(window.innerWidth<768)
 
   function responsive(){
     if(window.innerWidth<600) setIsMobile(true)

@@ -15,6 +15,8 @@ function Section1({isMobile}) {
     setImgFlag(!imgFlag)
   }, 3000);
 
+  //# ---------------------cube position animation -------------------------------
+
   useEffect(() => {
     gsap.to('.cube-model', {
       y: 0,
@@ -30,6 +32,10 @@ function Section1({isMobile}) {
     })
 
   }, [])
+
+
+  //# ---------------------cube rotation animation -------------------------------
+
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -163,7 +169,6 @@ function Section1({isMobile}) {
           </div>
           <div className="cube-model">
             <Canvas camera={{ fov: 45, position: [0, 3, 25] }} >
-              {/* <OrbitControls enableZoom={false} touches={false} autoRotate={false} /> */}
               <ambientLight intensity={2} />
               <directionalLight position={[0, 3, 10]} />
               <RubiksCubeModel setCubeRef={setCubeRef} />

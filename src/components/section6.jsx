@@ -14,6 +14,7 @@ function Section6({ isMobile }) {
     const [loading, setLoading] = useState(false)
     const [rotationFlag, setRotationFlag] = useState(false)
 
+  //# --------------------- cursor interaction -------------------------------
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -43,6 +44,8 @@ function Section6({ isMobile }) {
             }, 700);
         }
     }
+
+  //# ---------------------mobile animation -------------------------------
 
     useEffect(()=>{
        {isMobile &&

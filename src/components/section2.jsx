@@ -15,7 +15,7 @@ function Section2({isMobile}) {
     ScrollTrigger.create({
       trigger: '.blur-section',
       start: 'top top',
-      end: `+=${height*2}`,
+      end: `+=${height*3}`,
       pin: true,
       scrub: 1,
       // markers : true
@@ -27,7 +27,7 @@ function Section2({isMobile}) {
       scrollTrigger: {
         trigger: '.top-spacing',
         start: 'top top',
-        end: `+=${height * 3}`,
+        end: `+=${height * 4}`,
         scrub: 1,
       }
     })
@@ -35,7 +35,6 @@ function Section2({isMobile}) {
     tl1.to('.box-1', {
       height: `${isMobile?'17vh':'35vh'}`,
       width: `${isMobile?'17vh':'35vh'}`,
-      transformOrigin: 'bottom left',
       rotationZ: '30deg',
       duration: 4
     })
@@ -64,19 +63,19 @@ function Section2({isMobile}) {
         height: '5vh',
         width: '5vh',
         rotationZ: '90deg',
-        x: `${isMobile?'-1vh':'-1vh'}`,
         y: 0,
+        left:`${isMobile?'14vh':'34vh'}`,
         duration: 4
       })
 
-    // # -------------------- box-2 animation --------------------
 
+    // # -------------------- box-2 animation --------------------
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: '.top-spacing',
         start: 'top top',
-        end: `+=${height * 3}`,
+        end: `+=${height * 4}`,
         scrub: 1,
       }
     })
@@ -85,7 +84,6 @@ function Section2({isMobile}) {
       height: `${isMobile?'17vh':'35vh'}`,
       width: `${isMobile?'17vh':'35vh'}`,
       x: 0,
-      transformOrigin: 'top right',
       rotationZ: '-30deg',
       duration: 4
     })
@@ -114,8 +112,8 @@ function Section2({isMobile}) {
         height: `${isMobile?'5vh':'5vh'}`,
         width: `${isMobile?'5vh':'5vh'}`,
         rotationZ: '-90deg',
-        x: `${isMobile?'-4vh':'-4vh'}`,
         y: '5vh',
+        right:`${isMobile?'19vh':'39vh'}`,
         duration: 4
       })
 
@@ -133,8 +131,12 @@ function Section2({isMobile}) {
             </div>
           </div>
           <div className="box-section d-flex justify-content-center mt-4 position-relative">
-            <div className="box-1"></div>
-            <div className="box-2"></div>
+            <div className="box1-wrapper position-relative">
+            <div className="box-1 position-absolute"></div>
+            </div>
+            <div className="box2-wrapper position-relative">
+            <div className="box-2 position-absolute"></div>
+            </div>
           </div>
         </div>
       </div>
