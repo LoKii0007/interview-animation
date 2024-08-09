@@ -42,7 +42,7 @@ function Section4({isMobile}) {
     gsap.to('.section4-text1', {
       opacity: 1,
       width :'100%',
-      fontSize:`${isMobile?25:100}`,
+      fontSize:`${isMobile?25:90}`,
       scrollTrigger: {
         trigger: '.section-4',
         start: 'center bottom',
@@ -57,7 +57,7 @@ function Section4({isMobile}) {
     })
 
     tl1.to('.marketing-circle', {
-      y:'40vh',
+      y:`${isMobile?'40vh':'30vh'}`,
       ease:'bounce',
       duration:2,
     })

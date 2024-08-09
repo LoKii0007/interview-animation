@@ -163,7 +163,7 @@ function Section1({isMobile}) {
           </div>
           <div className="cube-model">
             <Canvas camera={{ fov: 45, position: [0, 3, 25] }} >
-              <OrbitControls enableZoom={false} touches={false} autoRotate={false} />
+              {/* <OrbitControls enableZoom={false} touches={false} autoRotate={false} /> */}
               <ambientLight intensity={2} />
               <directionalLight position={[0, 3, 10]} />
               <RubiksCubeModel setCubeRef={setCubeRef} />

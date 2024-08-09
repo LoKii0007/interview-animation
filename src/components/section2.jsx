@@ -64,7 +64,7 @@ function Section2({isMobile}) {
         height: '5vh',
         width: '5vh',
         rotationZ: '90deg',
-        x: `${isMobile?'-1vh':'2vh'}`,
+        x: `${isMobile?'-1vh':'-1vh'}`,
         y: 0,
         duration: 4
       })
@@ -114,7 +114,7 @@ function Section2({isMobile}) {
         height: `${isMobile?'5vh':'5vh'}`,
         width: `${isMobile?'5vh':'5vh'}`,
         rotationZ: '-90deg',
-        x: `${isMobile?'-4vh':'-2vh'}`,
+        x: `${isMobile?'-4vh':'-4vh'}`,
         y: '5vh',
         duration: 4
       })

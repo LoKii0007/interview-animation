@@ -11,8 +11,9 @@ function Section6({ isMobile }) {
     gsap.registerPlugin(ScrollTrigger)
     const [rotationZ, setRotationZ] = useState(0)
     const [current, setCurrent] = useState('drink-1')
-    const [prev, setPrev] = useState('drink-1')
     const [loading, setLoading] = useState(false)
+    const [rotationFlag, setRotationFlag] = useState(false)
+
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -22,7 +23,7 @@ function Section6({ isMobile }) {
             const maxRotation = Math.PI / 2
 
             const rotation = ((mouseX - middleX) / middleX) * maxRotation
-            setRotationZ(rotation)
+            if(!rotationFlag) setRotationZ(rotation)
         }
 
         window.addEventListener('mousemove', handleMouseMove)
@@ -30,13 +31,12 @@ function Section6({ isMobile }) {
         return () => {
             window.removeEventListener('mousemove', handleMouseMove)
         }
-    }, [])
+    }, [rotationFlag])
 
     function handleDrink(e) {
         let name = e.currentTarget.getAttribute('name')
         if (name !== current) {
             setLoading(true)
-            // setPrev(current)
             setCurrent(name)
             setTimeout(() => {
                 setLoading(false)
@@ -84,21 +84,22 @@ function Section6({ isMobile }) {
                             <img className='giphy' src="/giphy.webp" alt="" />
                         </> :
                         <>
-                            <div className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} >
-                                <Canvas camera={{ fov: 24, position: [0, 5, 10] }} >
+                            <div onMouseEnter={()=>setRotationFlag(true)} onMouseLeave={()=>setRotationFlag(false)} className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} >
+                                <Canvas camera={{ fov: 24, position: [0, 5, 10], rotation:[1, 0, 0] }} >
                                     <ambientLight intensity={3} />
                                     <directionalLight intensity={2} position={[-5, 7, 10]} />
-                                    {!isMobile && <OrbitControls autoRotate={false} enableZoom={false} />}
+                                    <OrbitControls autoRotate={rotationFlag?true:false} enableZoom={false} />
                                     <MonsterModel rotationZ={rotationZ} />
                                 </Canvas>
                             </div>
 
-                            <div className={`can-model ${current === 'drink-2' ? 'd-block' : ' d-none'} `} >
+                            <div onMouseEnter={()=>setRotationFlag(true)} onMouseLeave={()=>setRotationFlag(false)} className={`can-model ${current === 'drink-2' ? 'd-block' : ' d-none'} `} >
                                 <Canvas camera={{ fov: 4, position: [0, 5, 10] }} >
                                     <ambientLight intensity={3} />
-                                    <directionalLight intensity={2} position={[-1, 7, 10]} />
+                                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                                    {/* <directionalLight intensity={2} position={[-1, 7, 10]} /> */}
                                     <MonsterPinkModel rotationZ={rotationZ} />
-                                    {!isMobile && <OrbitControls autoRotate={false} enableZoom={false} />}
+                                    <OrbitControls autoRotate={rotationFlag?true:false} enableZoom={false} />
                                 </Canvas>
                             </div>
                         </>}
