@@ -3,7 +3,7 @@ import '../css/section2.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-function Section2() {
+function Section2({isMobile}) {
 
   gsap.registerPlugin(ScrollTrigger)
   const height = window.innerHeight
@@ -33,28 +33,28 @@ function Section2() {
     })
 
     tl1.to('.box-1', {
-      height: '35vh',
-      width: '35vh',
+      height: `${isMobile?'17vh':'35vh'}`,
+      width: `${isMobile?'17vh':'35vh'}`,
       transformOrigin: 'bottom left',
       rotationZ: '30deg',
       duration: 4
     })
     tl1.to('.box-1', {
-      height: '20vh',
-      width: '20vh',
-      x: '-20vw',
-      y: '-70vh',
+      height: `${isMobile?'10vh':'20vh'}`,
+      width: `${isMobile?'10vh':'20vh'}`,
+      x: `${isMobile?'-10vw':'-20vw'}`,
+      y: `-70vh`,
       rotationZ: '45deg',
       duration: 4
     })
     tl1.to('.box-1', {
-      x: '-15vw',
-      y: '-60vh',
+      x: `${isMobile?'-5vw':'-15vw'}`,
+      y: `-60vh`,
       duration: 1
     })
       .to('.box-1', {
-        height: '8vh',
-        width: '8vh',
+        height: `${isMobile?'7vh':'8vh'}`,
+        width: `${isMobile?'7vh':'8vh'}`,
         rotationZ: '85deg',
         x: 0,
         y: '-30vh',
@@ -64,7 +64,7 @@ function Section2() {
         height: '5vh',
         width: '5vh',
         rotationZ: '90deg',
-        x: '2vh',
+        x: `${isMobile?'-1vh':'2vh'}`,
         y: 0,
         duration: 4
       })
@@ -82,39 +82,39 @@ function Section2() {
     })
 
     tl2.to('.box-2', {
-      height: '35vh',
-      width: '35vh',
+      height: `${isMobile?'17vh':'35vh'}`,
+      width: `${isMobile?'17vh':'35vh'}`,
       x: 0,
       transformOrigin: 'top right',
       rotationZ: '-30deg',
       duration: 4
     })
     tl2.to('.box-2', {
-      height: '20vh',
-      width: '20vh',
-      x: '20vw',
+      height: `${isMobile?'10vh':'20vh'}`,
+      width:`${isMobile?'10vh':'20vh'}`,
+      x: `${isMobile?'0px':'20vw'}`,
       y: '-90vh',
       rotationZ: '-45deg',
       duration: 4
     })
     tl2.to('.box-2', {
-      x: '15vw',
+      x: `${isMobile?'0px':'15vw'}`,
       y: '-70vh',
       duration: 1
     })
       .to('.box-2', {
-        height: '8vh',
-        width: '8vh',
+        height: `${isMobile?'7vh':'8vh'}`,
+        width: `${isMobile?'7vh':'8vh'}`,
         rotationZ: '-85deg',
         x: 0,
         y: '-25vh',
         duration: 5
       })
       .to('.box-2', {
-        height: '5vh',
-        width: '5vh',
+        height: `${isMobile?'5vh':'5vh'}`,
+        width: `${isMobile?'5vh':'5vh'}`,
         rotationZ: '-90deg',
-        x: '-2vh',
+        x: `${isMobile?'-4vh':'-2vh'}`,
         y: '5vh',
         duration: 4
       })

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/section4.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-function Section4() {
+function Section4({isMobile}) {
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -23,7 +23,7 @@ function Section4() {
     ScrollTrigger.create({
       trigger: '.section-4',
       start: 'top top',
-      end: `+=${height*2}`,
+      end: `+=${height*1.75}`,
       pin: '.part-1',
       scrub: 1
     })
@@ -31,23 +31,48 @@ function Section4() {
     gsap.to('.section4-text2', {
       opacity: 1,
       scrollTrigger: {
-        trigger: '.main-div',
-        start: 'bottom -50%',
+        trigger: '.section-4',
+        start: 'center bottom',
         end: `+=${height / 2}`,
-        scrub: 1
+        scrub: 1,
+        // markers : true,
       }
     })
 
     gsap.to('.section4-text1', {
       opacity: 1,
       width :'100%',
-      fontSize:100,
+      fontSize:`${isMobile?25:100}`,
       scrollTrigger: {
         trigger: '.section-4',
         start: 'center bottom',
         end: `+=${height}`,
         scrub: 1,
         // markers : true
+      }
+    })
+
+    let tl1 = gsap.timeline({
+      paused:true
+    })
+
+    tl1.to('.marketing-circle', {
+      y:'40vh',
+      ease:'bounce',
+      duration:2,
+    })
+
+    ScrollTrigger.create({
+      trigger: '.section-4',
+      start: 'center top',
+      end: `center -1%`,
+      scrub: 1,
+      // toggleActions:"play none reverse none"
+      onEnter:()=>{
+        tl1.play()
+      },
+      onLeaveBack:()=>{
+        tl1.reverse()
       }
     })
 

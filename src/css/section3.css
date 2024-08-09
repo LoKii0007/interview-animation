@@ -42,3 +42,27 @@
     background-color: whitesmoke;
     transform: rotate(-10deg);
 }
+
+@media screen and (max-width:600px) {
+    .word{
+        font-size: 150px;
+        line-height: 150px;
+        /* word-break: keep-all; */
+        white-space: normal;
+        text-align: center;
+    }
+    .outer-circle, .inner-circle, .middle-circle{
+        width: 100vw;
+        height: 100vw;
+        white-space: normal;
+        text-align: center;
+    }
+    .middle-circle{
+        width: 60vw;
+        height: 60vw;
+    }
+    .inner-circle{
+        width: 30vw;
+        height: 30vw;
+    }
+}

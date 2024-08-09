@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Matter from 'matter-js';
 import '../css/section5.css';
 
-function Section5() {
+function Section5({isMobile}) {
     useEffect(() => {
         let Example = {};
 
@@ -24,7 +24,7 @@ function Section5() {
                 element: document.querySelector('.matter'),
                 engine: engine,
                 options: {
-                    width: 800,
+                    width: `${isMobile?400:800}`,
                     height: 600,
                     showVelocity: false,
                     showAngleIndicator: false,
@@ -40,9 +40,9 @@ function Section5() {
 
             //# -------------------adding static bodies---------------
             Composite.add(world, [
-                Bodies.rectangle(400, 0, 800, 50, { isStatic: true, render: { fillStyle: 'white' } }),
-                Bodies.rectangle(400, 600, 800, 50.5, { isStatic: true, render: { fillStyle: 'white' } }),
-                Bodies.rectangle(800, 300, 50, 600, { isStatic: true, render: { fillStyle: 'white' } }),
+                Bodies.rectangle(`${isMobile?400/2:400}`, 0, `${isMobile?400:800}`, 50, { isStatic: true, render: { fillStyle: 'white' } }),
+                Bodies.rectangle(`${isMobile?400/2:400}`, 600, `${isMobile?400:800}`, 50, { isStatic: true, render: { fillStyle: 'white' } }),
+                Bodies.rectangle(`${isMobile?400:800}`, 300, 50, 600, { isStatic: true, render: { fillStyle: 'white' } }),
                 Bodies.rectangle(0, 300, 50, 600, { isStatic: true, render: { fillStyle: 'white' } })
                 // Bodies.circle(400, 300, 400 , {isStatic:true , render : { fillStyle :'red' } } )
             ]);
@@ -51,7 +51,7 @@ function Section5() {
             engine.gravity.y = 0;
 
             //# ----------------------- creating stack
-            let stackW = Composites.stack(400, 300, 10, 6, 0, 0, function (x, y) {
+            let stackW = Composites.stack(200, 300, 10, 6, 0, 0, function (x, y) {
                 let body;
                 body = Bodies.circle(x, y, 25, { 
                     render: { 
@@ -64,7 +64,7 @@ function Section5() {
                 return body;
             });
 
-            let stackS = Composites.stack(400, 300, 10, 6, 0, 0, function (x, y) {
+            let stackS = Composites.stack(200, 300, 10, 6, 0, 0, function (x, y) {
                 let body;
                 body = Bodies.circle(x, y, 25, { 
                     render: { 
@@ -97,7 +97,7 @@ function Section5() {
             // render viewport
             Render.lookAt(render, {
                 min: { x: 0, y: 0 },
-                max: { x: 800, y: 600 }
+                max: { x: `${isMobile?400:800}`, y: 600 }
             });
 
             // gravity

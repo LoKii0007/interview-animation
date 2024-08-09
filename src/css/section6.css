@@ -55,3 +55,39 @@
 .giphy{
     width: 400px;
 }
+
+.section6-mobile{
+    display: none !important;
+}
+
+@media screen and (max-width:600px) {
+    .section-6{
+        display: none !important;
+    }
+    .can-model{
+        height: 60vh;
+    }
+    .can-section1, .can-section2{
+        width: 100vw;
+        height: 100%;
+    }
+    .mobile-wrapper{
+        width: 200vw;
+        height: 100%;
+        /* overflow-x: scroll; */
+    }
+    .section6-mobile{
+        display: flex !important;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .can-card{
+        width: 90%;
+        height: 15vh;
+        max-height: 120px;
+    }
+    .card-right{
+        width: 30vw;
+    }
+}

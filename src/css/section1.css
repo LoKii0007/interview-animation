@@ -128,6 +128,47 @@
     animation: vertical-fill 4s ease infinite;
 }
 
+/*# ------------------ mdeia queries -----------------------------  */
+
+
+@media screen and (max-width:600px) {
+    .cube-model{
+        transform: translateY(-150vh);
+    }
+    .sec1-text{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .blockchain-end{
+        flex-direction: column !important;
+    }
+    .icon-img img{
+        height: 40px;
+        width: 40px;
+        padding: 8px;
+    }
+    .dash, .dash-up{
+        height: 3px;
+        width: 10px;
+    }
+    .dash-1, .dash-up-1{
+        width: 3px;
+        height: 10px;
+    }
+    .icon-1{
+        top: 0%;
+    }
+    .icon-2{
+        left: 0%;
+    }
+    .icon-3{
+        bottom: 0%;
+    }
+    .icon-4{
+        right: 0%;
+    }
+}
+
 
 /*# ------------------keyframes-----------------------------  */
 
