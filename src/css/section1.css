@@ -69,11 +69,11 @@
     z-index: 100;
 }
 .icon-img img{
-   height: 80px;
-   width: 80px;
+   height: 60px;
+   width: 60px;
    border-radius: 50%;
    border: 1px solid white;
-   padding: 15px;
+   padding: 10px;
    background-color: black;
 }
 
@@ -133,11 +133,15 @@
 
 @media screen and (max-width:768px) {
     .cube-model{
-        transform: translateY(-150vh);
+        transform: translateY(-130vh);
     }
     .sec1-text{
         font-size: 30px;
         line-height: 40px;
+    }
+    .chain-right{
+        height: 90vw;
+        width: 90vw;
     }
     .blockchain-end{
         flex-direction: column !important;
