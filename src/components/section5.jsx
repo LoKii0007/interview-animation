@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Matter from 'matter-js';
 import '../css/section5.css';
 
-function Section5({isMobile}) {
+function Section5({ isMobile }) {
 
     useEffect(() => {
         let Example = {};
@@ -25,7 +25,7 @@ function Section5({isMobile}) {
                 element: document.querySelector('.matter'),
                 engine: engine,
                 options: {
-                    width: `${isMobile?(window.innerWidth*0.9):800}`,
+                    width: `${isMobile ? (window.innerWidth * 0.9) : 800}`,
                     height: 600,
                     showVelocity: false,
                     showAngleIndicator: false,
@@ -41,10 +41,34 @@ function Section5({isMobile}) {
 
             //# -------------------adding static bodies---------------
             Composite.add(world, [
-                Bodies.rectangle(`${isMobile?(window.innerWidth*0.9)/2:400}`, 0, `${isMobile?(window.innerWidth*0.9):800}`, 50, { isStatic: true, render: { fillStyle: 'white' } }),
-                Bodies.rectangle(`${isMobile?(window.innerWidth*0.9)/2:400}`, 600, `${isMobile?(window.innerWidth*0.9):800}`, 50, { isStatic: true, render: { fillStyle: 'white' } }),
-                Bodies.rectangle(`${isMobile?(window.innerWidth*0.9):800}`, 300, 50, 600, { isStatic: true, render: { fillStyle: 'white' } }),
-                Bodies.rectangle(0, 300, 50, 600, { isStatic: true, render: { fillStyle: 'white' } })
+                Bodies.rectangle(`${isMobile ? (window.innerWidth * 0.9) / 2 : 400}`, 0, `${isMobile ? (window.innerWidth * 0.9) : 800}`, 50,
+                    {
+                        isStatic: true,
+                        render: {
+                            fillStyle: 'white'
+                        }
+                    }),
+                Bodies.rectangle(`${isMobile ? (window.innerWidth * 0.9) / 2 : 400}`, 600, `${isMobile ? (window.innerWidth * 0.9) : 800}`, 50,
+                    {
+                        isStatic: true,
+                        render: {
+                            fillStyle: 'white'
+                        }
+                    }),
+                Bodies.rectangle(`${isMobile ? (window.innerWidth * 0.9) : 800}`, 300, 50, 600,
+                    {
+                        isStatic: true,
+                        render: {
+                            fillStyle: 'white'
+                        }
+                    }),
+                Bodies.rectangle(0, 300, 50, 600,
+                    {
+                        isStatic: true,
+                        render: {
+                            fillStyle: 'white'
+                        }
+                    })
                 // Bodies.circle(400, 300, 400 , {isStatic:true , render : { fillStyle :'red' } } )
             ]);
 
@@ -54,12 +78,12 @@ function Section5({isMobile}) {
             //# ----------------------- creating stack
             let stackW = Composites.stack(200, 300, 10, 6, 0, 0, function (x, y) {
                 let body;
-                body = Bodies.circle(x, y, 25, { 
-                    render: { 
-                        sprite: { 
-                            texture: '/w.svg' 
-                        } 
-                    } 
+                body = Bodies.circle(x, y, 25, {
+                    render: {
+                        sprite: {
+                            texture: '/w.svg'
+                        }
+                    }
                 });
                 body.isReverseGravity = true;
                 return body;
@@ -67,12 +91,12 @@ function Section5({isMobile}) {
 
             let stackS = Composites.stack(200, 300, 10, 6, 0, 0, function (x, y) {
                 let body;
-                body = Bodies.circle(x, y, 25, { 
-                    render: { 
-                        sprite: { 
-                            texture: '/s.svg' 
-                        } 
-                    } 
+                body = Bodies.circle(x, y, 25, {
+                    render: {
+                        sprite: {
+                            texture: '/s.svg'
+                        }
+                    }
                 });
                 body.isReverseGravity = false;
                 return body;
@@ -98,7 +122,7 @@ function Section5({isMobile}) {
             // render viewport
             Render.lookAt(render, {
                 min: { x: 0, y: 0 },
-                max: { x: `${isMobile?(window.innerWidth*0.9):800}`, y: 600 }
+                max: { x: `${isMobile ? (window.innerWidth * 0.9) : 800}`, y: 600 }
             });
 
             // gravity

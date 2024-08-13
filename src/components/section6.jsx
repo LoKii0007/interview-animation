@@ -70,7 +70,11 @@ function Section6({ isMobile }) {
         <>
             <div className="section-6 d-flex justify-content-evenly align-items-center">
                 <div className="can-left d-flex flex-column align-items-center">
-                    <div className="can-card col-6 rounded-pill d-flex align-items-center" onClick={(e) => handleDrink(e)} name='drink-1'>
+                    <div 
+                      className="can-card col-6 rounded-pill d-flex align-items-center" 
+                      onClick={(e) => handleDrink(e)} 
+                      name='drink-1'
+                    >
                         <div className="card-left" >
                             <div className="can-heading text-center">Monster Energy</div>
                             <div className="can-desc text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum placeat hic, omnis quam qui aut.</div>
@@ -87,7 +91,11 @@ function Section6({ isMobile }) {
                             <img className='giphy' src="/giphy.webp" alt="" />
                         </> :
                         <>
-                            <div onMouseEnter={()=>setRotationFlag(true)} onMouseLeave={()=>setRotationFlag(false)} className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} >
+                            <div 
+                              onMouseEnter={()=>setRotationFlag(true)} 
+                              onMouseLeave={()=>setRotationFlag(false)} 
+                              className={`can-model ${current === 'drink-1' ? 'd-block' : ' d-none'} `} 
+                            >
                                 <Canvas camera={{ fov: 24, position: [0, 5, 10], rotation:[1, 0, 0] }} >
                                     <ambientLight intensity={3} />
                                     <directionalLight intensity={2} position={[-5, 7, 10]} />
@@ -96,10 +104,18 @@ function Section6({ isMobile }) {
                                 </Canvas>
                             </div>
 
-                            <div onMouseEnter={()=>setRotationFlag(true)} onMouseLeave={()=>setRotationFlag(false)} className={`can-model ${current === 'drink-2' ? 'd-block' : ' d-none'} `} >
+                            <div 
+                              onMouseEnter={()=>setRotationFlag(true)} 
+                              onMouseLeave={()=>setRotationFlag(false)} 
+                              className={`can-model ${current === 'drink-2' ? 'd-block' : ' d-none'} `} 
+                            >
                                 <Canvas camera={{ fov: 4, position: [0, 5, 10] }} >
                                     <ambientLight intensity={3} />
-                                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                                    <spotLight 
+                                      position={[10, 10, 10]} 
+                                      angle={0.15} 
+                                      penumbra={1} 
+                                    />
                                     {/* <directionalLight intensity={2} position={[-1, 7, 10]} /> */}
                                     <MonsterPinkModel rotationZ={rotationZ} />
                                     <OrbitControls autoRotate={rotationFlag?true:false} enableZoom={false} />
@@ -110,7 +126,11 @@ function Section6({ isMobile }) {
 
                 <div className="can-right d-flex flex-column align-items-center">
 
-                    <div className="can-card rounded-pill col-6 d-flex align-items-center" onClick={(e) => handleDrink(e)} name='drink-2'>
+                    <div 
+                      className="can-card rounded-pill col-6 d-flex align-items-center" 
+                      onClick={(e) => handleDrink(e)} 
+                      name='drink-2'
+                    >
                         <div className="card-right d-flex align-items-center justify-content-end">
                             <img className='can-img img-style-2' src="/monster-pink.png" alt="" />
                         </div>
@@ -128,7 +148,10 @@ function Section6({ isMobile }) {
                     <div className={`can-model `} >
                         <Canvas camera={{ fov: 24, position: [0, 5, 10] }} >
                             <ambientLight intensity={3} />
-                            <directionalLight intensity={2} position={[-5, 7, 10]} />
+                            <directionalLight 
+                              intensity={2} 
+                              position={[-5, 7, 10]} 
+                            />
                             {!isMobile && <OrbitControls autoRotate={false} enableZoom={false} />}
                             <MonsterModel rotationZ={rotationZ} />
                         </Canvas>
@@ -147,7 +170,10 @@ function Section6({ isMobile }) {
                     <div className={`can-model  `} >
                         <Canvas camera={{ fov: 4, position: [0, 5, 10] }} >
                             <ambientLight intensity={3} />
-                            <directionalLight intensity={2} position={[-1, 7, 10]} />
+                            <directionalLight 
+                              intensity={2} 
+                              position={[-1, 7, 10]} 
+                            />
                             <MonsterPinkModel rotationZ={rotationZ} />
                             {!isMobile && <OrbitControls autoRotate={false} enableZoom={false} />}
                         </Canvas>
