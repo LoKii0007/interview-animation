@@ -15,11 +15,12 @@ function Section4({isMobile}) {
 
     gsap.to('.marketing-circle', {
       scale: 1,
+      force3D: true,
       scrollTrigger: {
         trigger: '.section-4',
         start: 'top top',
         end: `+=${height}`,
-        scrub: 1
+        scrub: 1,
       }
     })
 
