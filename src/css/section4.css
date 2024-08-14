@@ -16,6 +16,7 @@
     background-color: white;
     scale: 10;
     /* z-index: 100; */
+    will-change: transform;
 }
 
 .section4-text1{
@@ -23,6 +24,7 @@
     font-size: 50px;
     color: white;
     opacity: 0;
+    will-change: transform;
 }
 
 .section4-text2{
@@ -30,6 +32,7 @@
     z-index: 120;
     font-size: 30px;
     opacity: 0;
+    will-change: transform;
     font-weight: 600;
 }
 
@@ -58,6 +61,6 @@
         align-items: center;
     }
     .marketing-circle{
-        scale: 13;
+        scale: 12;
     }
 }

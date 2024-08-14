@@ -6,6 +6,7 @@ import { MonsterPinkModel } from '../models/MonsterPink';
 import { OrbitControls } from '@react-three/drei';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 function Section6({ isMobile }) {
     gsap.registerPlugin(ScrollTrigger)
@@ -47,7 +48,7 @@ function Section6({ isMobile }) {
 
   //# ---------------------mobile animation -------------------------------
 
-    useEffect(()=>{
+    useGSAP(()=>{
        {isMobile &&
         gsap.to('.mobile-wrapper', {
             x:'-100vw',

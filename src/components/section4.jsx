@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import '../css/section4.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import { useGSAP } from '@gsap/react'
 
 function Section4({isMobile}) {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useGSAP(() => {
     const height = window.innerHeight
 
   //# ---------------------circle shrink animation -------------------------------

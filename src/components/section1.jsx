@@ -4,6 +4,7 @@ import { OrbitControls } from '@react-three/drei';
 import '../css/section1.css'
 import { RubiksCubeModel } from '../models/Rubiks-cube';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 function Section1({isMobile}) {
 
@@ -17,7 +18,7 @@ function Section1({isMobile}) {
 
   //# ---------------------cube position animation -------------------------------
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.to('.cube-model', {
       y: 0,
       x: 0,
@@ -37,7 +38,7 @@ function Section1({isMobile}) {
   //# ---------------------cube rotation animation -------------------------------
 
 
-  useEffect(() => {
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-1',

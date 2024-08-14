@@ -2,13 +2,14 @@ import React, { useEffect } from 'react'
 import '../css/section2.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 function Section2({isMobile}) {
 
   gsap.registerPlugin(ScrollTrigger)
   const height = window.innerHeight
 
-  useEffect(() => {
+  useGSAP(() => {
 
     // # ------------------------ pinned container --------------------------
 

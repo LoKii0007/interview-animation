@@ -2,12 +2,13 @@ import React, { useEffect, useRef, useLayoutEffect } from 'react'
 import '../css/section3.css'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react';
 
 function Section3() {
   gsap.registerPlugin(ScrollTrigger)
   // const sectionRef = useRef()
 
-  useEffect(() => {
+  useGSAP(() => {
 
     const windowHeight = window.innerHeight
 
